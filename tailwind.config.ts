@@ -7,14 +7,16 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-custom': 'linear-gradient(to right, #FFECFC, #EEF8FF)',
+        "gradient-custom": "linear-gradient(to right, #FFECFC, #EEF8FF)",
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],
         bagel: ["Bagel Fat One", "system-ui"],
-        syne: ["Syne", "sans-sarif"],
-        source:["Source Code Pro", "monospace"],
-        static:["Bacasime Antique", "serif"]
+        syne: ["Syne", "sans-serif"],
+        source: ["Source Code Pro", "monospace"],
+        static: ["Bacasime Antique", "serif"],
+        baloo: ["Baloo 2", "sans-serif"],
+        pagi:["Baloo Paaji 2", "sans-serif"]
       },
       colors: {
         background: "var(--background)",
