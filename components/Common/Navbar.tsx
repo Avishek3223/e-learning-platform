@@ -1,8 +1,11 @@
+"use client"
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useRouter } from 'next/navigation';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const router = useRouter()
 
     const menuItems = ['Home', 'Courses', 'Learnings'];
 
@@ -37,7 +40,9 @@ const Navbar = () => {
             x: 0
         }
     };
-
+    const handleNavigate = (item:string) => {
+        router.push(`/${item}`)
+    }
     return (
         <nav className="w-full border-b border-black">
             <div className="flex justify-between items-center p-4">
@@ -48,7 +53,8 @@ const Navbar = () => {
                 {/* Desktop Menu */}
                 <div className="hidden md:flex gap-6 font-static text-[1.5rem]">
                     {menuItems.map((item) => (
-                        <div key={item}>{item}</div>
+                        <div key={item}
+                            onClick={() => handleNavigate(item)}>{item}</div>
                     ))}
                 </div>
 
